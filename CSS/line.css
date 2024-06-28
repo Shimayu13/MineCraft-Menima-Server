@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.content {
+    width: 100%;
+}
+
+.planbox {
+    width: 80vw;
+    height: 30vw;
+    border-radius: 2vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    overflow: hidden;
+    margin-bottom: 20px;
+    margin-left: 10vw;
+    position: relative;
+}
+
+.plpicture {
+    width: 40vw;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* 画像の繰り返しを防止 */
+    position: relative;
+    overflow: hidden; /* 子要素がはみ出さないように設定 */
+}
+
+.plpicture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1s ease-in-out;
+}
+
+.pl1 img:nth-child(1) {
+    transform: translateX(0);
+}
+
+.pl1 img:nth-child(2) {
+    transform: translateX(100%);
+}
+
+.planbox:hover .pl1 img:nth-child(1) {
+    transform: translateX(-100%);
+}
+
+.planbox:hover .pl1 img:nth-child(2) {
+    transform: translateX(0);
+}
+
+/* pl2, pl3に対する同様のスタイルを追加 */
+.pl2 img:nth-child(1) {
+    transform: translateX(0);
+}
+
+.pl2 img:nth-child(2) {
+    transform: translateX(100%);
+}
+
+.planbox:hover .pl2 img:nth-child(1) {
+    transform: translateX(-100%);
+}
+
+.planbox:hover .pl2 img:nth-child(2) {
+    transform: translateX(0);
+}
+
+.pl3 img:nth-child(1) {
+    transform: translateX(0);
+}
+
+.pl3 img:nth-child(2) {
+    transform: translateX(100%);
+}
+
+.planbox:hover .pl3 img:nth-child(1) {
+    transform: translateX(-100%);
+}
+
+.planbox:hover .pl3 img:nth-child(2) {
+    transform: translateX(0);
+}
+
+.pltext {
+    width: 40vw;
+    height: 100%;
+    background: linear-gradient(to right, rgb(197, 228, 240), rgb(238, 238, 194));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h2 {
+    padding: 5vw 10vw;
+}

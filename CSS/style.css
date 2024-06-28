@@ -1,0 +1,116 @@
+/* header のスタイル */
+.header {
+    height: 5vw;
+    width: 100vw;
+    background-color: azure;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* horizontalMark のスタイル */
+.horizontalMark {
+    width: 50vw;
+}
+
+/* horizontal のスタイル */
+.horizontal {
+    height: 5vw;
+    width: 9vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+    position: relative;
+    color: black; /* 文字色を黒に設定 */
+    text-decoration: none; /* 下線を消す */
+}
+
+/* horizontal のリンクのスタイル */
+.horizontal a {
+    color: black; /* リンクの文字色を黒に設定 */
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+/* ホバー時のスタイル */
+.horizontal:hover {
+    background-color: whitesmoke;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.1), 4px 0 8px rgba(0, 0, 0, 0.1); /* 左右のみ影を追加 */
+}
+
+/* サブメニューのスタイル */
+.submenu {
+    display: flex;
+    position: absolute;
+    top: 5vw;
+    left: 0;
+    width: 100vw;
+    background-color: rgba(245, 245, 245, 0.876);
+    z-index: 1;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.5s ease; /* 0.5秒のトランジションを追加 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    visibility: hidden; /* 初期状態で非表示に */
+}
+
+/* サブメニュー位置の調整 */
+.pl {
+    left: -55vw;
+}
+
+.ma {
+    left: -64vw;
+}
+
+.ro {
+    left: -73vw;
+}
+
+.st {
+    left: -82vw;
+}
+
+.mp {
+    left: -91vw;
+}
+
+/* ホバー時のサブメニュー表示 */
+.horizontal:hover .submenu {
+    opacity: 1;  /* 不透明にする */
+    visibility: visible; /* 表示に変更 */
+}
+
+/* hsub クラスのスタイル */
+.hsub {
+    margin: 0;
+    padding: 1vw;
+    text-align: center;
+    transition: background-color 0.5s ease;
+}
+
+/* hsub クラスのホバー時のスタイル */
+.hsub:hover {
+    background-color: gray;
+    color: white; /* テキストの色を変更して見やすくする */
+}
+
+/* headtext のスタイル */
+.headtext {
+    margin: 0;
+    padding-left: 5vw;
+    color: black; /* 文字色を黒に設定 */
+}
+
+/* headtext のリンクのスタイル */
+.headtext a {
+    color: black; /* リンクの文字色を黒に設定 */
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+/* pageLink のスタイル */
+.pageLink {
+    display: flex;
+}

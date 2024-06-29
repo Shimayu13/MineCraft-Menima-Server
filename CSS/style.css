@@ -114,3 +114,10 @@
 .pageLink {
     display: flex;
 }
+
+/* ロゴのスタイル */
+.logo {
+    height: 4vw; /* 必要に応じて調整 */
+    margin-right: 1vw; /* テキストとの間にスペースを追加 */
+    vertical-align: middle; /* テキストと垂直に中央揃え */
+}

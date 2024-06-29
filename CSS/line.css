@@ -96,6 +96,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 5vw; /* 説明文のパディングを5vwに設定 */
 }
 
 h2 {

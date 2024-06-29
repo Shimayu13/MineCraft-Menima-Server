@@ -1,0 +1,148 @@
+.content {
+    position: relative;
+}
+
+.roadmenu {
+    list-style-type: none;
+    padding: 5vw;
+}
+
+.roadbox {
+    width: 80vw;
+    height: 30vw;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-left: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(210, 214, 248), rgb(230, 255, 239));
+}
+
+.roadtext {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.broadpicture,
+.aroadpicture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40vw;
+    height: 100%;
+    transition: none;
+}
+
+.broadtext,
+.aroadtext {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40vw;
+    height: 100%;
+    transition: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* 初期状態 */
+.aroadpicture,
+.aroadtext {
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+/* ホバー時 */
+@keyframes hideBroad {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes showAroad {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ホバー解除時 */
+@keyframes showBroad {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes hideAroad {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+/* ホバー時のアニメーション適用 */
+.roadbox:hover .broadpicture,
+.roadbox:hover .broadtext {
+    animation: hideBroad 0.5s forwards;
+}
+
+.roadbox:hover .aroadpicture,
+.roadbox:hover .aroadtext {
+    animation: showAroad 0.5s forwards;
+}
+
+/* ホバー解除時のアニメーション適用 */
+.roadbox:not(:hover) .aroadpicture,
+.roadbox:not(:hover) .aroadtext {
+    animation: hideAroad 0.5s forwards;
+}
+
+.roadbox:not(:hover) .broadpicture,
+.roadbox:not(:hover) .broadtext {
+    animation: showBroad 0.5s forwards;
+}

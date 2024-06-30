@@ -1,9 +1,9 @@
 /* 基本スタイル */
 .content {
     width: 100%;
-    padding: 10vw;
     overflow-x: hidden;
     position: relative;
+    margin-bottom: 10vw;
 }
 
 .structuremenu {
@@ -15,15 +15,22 @@
 .structuretitle {
     text-align: left;
     font-size: 2em;
-    padding: 10px 0;
+    padding: 3vw 10vw 2vw 10vw;
     margin-bottom: 10px; /* タイトルとボックス間の余白 */
 }
 
 .slideitem {
     display: flex;
-    overflow-x: auto;
-    padding: 10px 0;
-    gap: 10vw; /* ボックス間の余白 */
+    overflow-x: scroll;
+    overflow-y: hidden; /* 垂直方向のスクロールを無効にする */
+    padding: 0 10vw 0 10vw;
+    gap: 7vw; /* ボックス間の余白 */
+    -ms-overflow-style: none;  /* IEとEdge用 */
+    scrollbar-width: none;  /* Firefox用 */
+}
+
+.slideitem::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera用 */
 }
 
 .structurebox {
@@ -34,6 +41,7 @@
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     flex-shrink: 0;
+    scroll-snap-align: start; /* ボックスのスナップ位置を設定 */
 }
 
 .structurebox img {

@@ -19,10 +19,15 @@
     margin-bottom: 10px; /* タイトルとボックス間の余白 */
 }
 
+.slideitem-container {
+    position: relative;
+}
+
 .slideitem {
+    height: 32vw;
     display: flex;
     overflow-x: scroll;
-    overflow-y: hidden; /* 垂直方向のスクロールを無効にする */
+    overflow-y: visible; /* 垂直方向のスクロールを無効にする */
     padding: 0 10vw 0 10vw;
     gap: 7vw; /* ボックス間の余白 */
     -ms-overflow-style: none;  /* IEとEdge用 */
@@ -34,6 +39,7 @@
 }
 
 .structurebox {
+    margin-top: 2vw;
     width: 21vw;
     height: 28vw;
     border-radius: 2vw;
@@ -42,6 +48,8 @@
     position: relative;
     flex-shrink: 0;
     scroll-snap-align: start; /* ボックスのスナップ位置を設定 */
+    transition: transform 0.5s; /* トランジションを追加 */
+    z-index: 1; /* デフォルトのz-index */
 }
 
 .structurebox img {
@@ -58,4 +66,27 @@
     font-size: 1.5em;
     padding: 5px;
     border-radius: 5px;
+}
+
+.structurebox:hover {
+    transform: scale(1.05); /* 拡大比率を設定 */
+    z-index: 10; /* ホバー時に最前面に表示 */
+}
+
+.explainBox{
+    display: none;
+    position: fixed;
+    z-index: 10;
+    margin: 5vw 10vw 5vw 10vw;
+    height: 40vw;
+    width: 80vw;
+    border-radius: 4vw;
+    background-color: rgba(193, 252, 233, 0.909);
+    border: 1px solid rgb(198, 238, 223);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.extext{
+    text-align: center;
+    margin:5vw;
 }

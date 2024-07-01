@@ -9,6 +9,7 @@
     flex-direction: column;
     align-items: center;
     gap: 3vw; /* 上下の間隔を確保 */
+    margin-bottom: 8vw;
 }
 
 .cmap {

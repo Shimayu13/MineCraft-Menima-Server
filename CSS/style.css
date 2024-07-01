@@ -127,18 +127,3 @@
     margin-right: 1vw; /* テキストとの間にスペースを追加 */
     vertical-align: middle; /* テキストと垂直に中央揃え */
 }
-
-/*これより下は削除予定*/
-
-.structure h3,
-.route h3,
-.structure .submenu,
-.route .submenu{
-    display: none;
-}
-.structure:hover,
-.route:hover{
-    background-color: azure;
-    box-shadow: none;
-
-}

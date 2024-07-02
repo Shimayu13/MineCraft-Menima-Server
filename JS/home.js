@@ -1,23 +1,43 @@
-var pics_src = new Array("../Picture/topic1.jpeg","../Picture/topic3.jpeg","../Picture/topic4.jpeg","../Picture/topic5.jpeg","../Picture/topic6.jpeg","../Picture/topic2.jpeg");
-var num = -1;
+document.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('.section');
+    const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-function slideshow_timer(){
-    if (num == 5){
-        num = 0;
-    } else {
-        num ++;
-    }
-    document.getElementById("mypic").src = pics_src[num];
-    if (num == 0,4){
-        setTimeout(slideshow_timer, 5000); 
-    } else if (num == 1,2,3) {
-        setTimeout(slideshow_timer, 1000);
-    } else if (num == 5) {
-        setTimeout(slideshow_timer, 2000);
-    }
-    
-}
+    sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        const textElement = section.querySelector('.textopic');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            sections.forEach(sec => sec.classList.remove('active'));
+            section.classList.add('active');
+            
+            if (textElement) {
+                sections.forEach(sec => {
+                    const txt = sec.querySelector('.textopic');
+                    if (txt) {
+                        txt.classList.remove('active');
+                        txt.classList.remove('entering');
+                        txt.classList.add('inactive');
+                    }
+                });
+                textElement.classList.remove('inactive');
+                textElement.classList.remove('entering');
+                textElement.classList.add('active');
+            }
+        } else {
+            if (textElement && !textElement.classList.contains('inactive')) {
+                textElement.classList.remove('active');
+                textElement.classList.add('inactive');
+            }
+        }
+    });
 
-document.addEventListener("DOMContentLoaded", function() {
-    slideshow_timer();
+    const activeSection = document.querySelector('.section.active');
+    if (activeSection) {
+        const enteringText = activeSection.querySelector('.textopic.entering');
+        if (enteringText) {
+            enteringText.classList.remove('entering');
+            enteringText.classList.add('active');
+        }
+    }
 });

@@ -1,6 +1,9 @@
 document.addEventListener('scroll', function() {
     const sections = document.querySelectorAll('.section');
+    const newsBoxes = document.querySelectorAll('.newsBox');
     const scrollPosition = window.scrollY + window.innerHeight / 2;
+    const documentHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
 
     sections.forEach((section, index) => {
         const sectionTop = section.offsetTop;
@@ -39,5 +42,34 @@ document.addEventListener('scroll', function() {
             enteringText.classList.remove('entering');
             enteringText.classList.add('active');
         }
+    }
+
+    // スクロールが一番下まで到達した場合、position: fixedを解除
+    const topictures = document.querySelectorAll('.topicture');
+    const textopic = document.querySelectorAll('.textopic');
+    if (window.scrollY + windowHeight >= documentHeight) {
+        topictures.forEach(topicture => {
+            topicture.style.position = 'absolute';
+        });
+        textopic.forEach(textopic => {
+            textopic.style.position = 'absolute';
+        });
+
+        // newsBoxを表示
+        newsBoxes.forEach(newsBox => {
+            newsBox.classList.add('active');
+        });
+    } else {
+        topictures.forEach(topicture => {
+            topicture.style.position = 'fixed';
+        });
+        textopic.forEach(textopic => {
+            textopic.style.position = 'fixed';
+        });
+
+        // newsBoxを非表示
+        newsBoxes.forEach(newsBox => {
+            newsBox.classList.remove('active');
+        });
     }
 });

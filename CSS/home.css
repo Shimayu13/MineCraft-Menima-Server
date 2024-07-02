@@ -75,3 +75,36 @@ body, html {
 #topicture1 {
     opacity: 1;
 }
+
+.boxlist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    margin: 5vw;
+}
+
+.newsBox {
+    height: 15vw;
+    width: 35vw;
+    margin: 5vw;
+    border-radius: 2vw;
+    background-color: rgb(229, 254, 251);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.newsBox .newstitle {
+    top: 5vw;
+    text-align: left;
+    padding:2vw;
+}
+
+.newsBox .newstext {
+    text-align: center;
+}
+
+
+/*
+<div class="newsBox" id="newsBox3">
+<h2 class="newstitle">アップデート情報</h2>
+<p class="newstext">2024/7/10 vr.1.21.0.03</p>
+</div> */

@@ -4,11 +4,17 @@
     box-sizing: border-box;
 }
 
+.header {
+    position: fixed;
+    z-index: 20;
+}
+
 .content {
     width: 80vw;
     background-color: whitesmoke;
     padding: 10px;
     margin-left: 10vw;
+    padding-top: 5vw;;
 }
 
 .dropmenu {

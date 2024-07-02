@@ -4,6 +4,12 @@
     overflow-x: hidden;
     position: relative;
     margin-bottom: 10vw;
+    padding-top:5vw;
+}
+
+.header {
+    position: fixed;
+    z-index: 20;
 }
 
 .structuremenu {

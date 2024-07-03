@@ -8,11 +8,6 @@
     position: relative;
 }
 
-.header {
-    position: fixed;
-    z-index: 20;
-}
-
 .roadmenu {
     list-style-type: none;
     padding: 5vw;

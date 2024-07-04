@@ -73,20 +73,3 @@
     z-index: 10; /* ホバー時に最前面に表示 */
 }
 
-.explainBox{
-    display: none;
-    position: fixed;
-    z-index: 10;
-    margin: 5vw 10vw 5vw 10vw;
-    height: 40vw;
-    width: 80vw;
-    border-radius: 4vw;
-    background-color: rgba(193, 252, 233, 0.909);
-    border: 1px solid rgb(198, 238, 223);
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.extext{
-    text-align: center;
-    margin:5vw;
-}

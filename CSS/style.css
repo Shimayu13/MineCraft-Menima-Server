@@ -127,3 +127,27 @@
     margin-right: 1vw; /* テキストとの間にスペースを追加 */
     vertical-align: middle; /* テキストと垂直に中央揃え */
 }
+
+/*削除する部分*/
+
+.structure h3{
+    display:none;
+}
+.structure:hover{
+    background-color: azure;
+    box-shadow: -4px 0 8px rgba(255, 255, 255, 0.1), 4px 0 8px rgba(255, 255, 255, 0.1); /* 左右のみ影を追加 */
+}
+.st {
+    display: none;
+}
+
+.route h3{
+    display:none;
+}
+.route:hover{
+    background-color: azure;
+    box-shadow: -4px 0 8px rgba(255, 255, 255, 0.1), 4px 0 8px rgba(255, 255, 255, 0.1); /* 左右のみ影を追加 */
+}
+.ma {
+    display: none;
+}

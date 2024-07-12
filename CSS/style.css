@@ -128,14 +128,91 @@
     vertical-align: middle; /* テキストと垂直に中央揃え */
 }
 
+/* Hamburger menu styles */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 1vw;
+}
+
+.hamburger-menu span {
+    background: black;
+    border-radius: 1px;
+    display: block;
+    height: 2px;
+    margin: 4px 0;
+    transition: all 0.3s ease-in-out;
+    width: 25px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 850px) {
+    .pageLink {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(245, 245, 245, 0.876);
+        z-index: 1000;
+        padding-top: 5vw;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+        justify-content: space-between;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    .pageLink.active {
+        display: flex;
+    }
+
+    .horizontal {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 1vw;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .submenu {
+        position: relative;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+        display: none; /* Hide submenu initially */
+    }
+
+    .submenu a {
+        padding: 1vw 2vw;
+    }
+
+    .horizontal:hover .submenu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .horizontal.active .submenu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 /*削除する部分*/
 
+/*
 .structure h3{
     display:none;
 }
 .structure:hover{
     background-color: azure;
-    box-shadow: -4px 0 8px rgba(255, 255, 255, 0.1), 4px 0 8px rgba(255, 255, 255, 0.1); /* 左右のみ影を追加 */
+    box-shadow: -4px 0 8px rgba(255, 255, 255, 0.1), 4px 0 8px rgba(255, 255, 255, 0.1); 
 }
 .st {
     display: none;
@@ -146,8 +223,10 @@
 }
 .route:hover{
     background-color: azure;
-    box-shadow: -4px 0 8px rgba(255, 255, 255, 0.1), 4px 0 8px rgba(255, 255, 255, 0.1); /* 左右のみ影を追加 */
+    box-shadow: -4px 0 8px rgba(255, 255, 255, 0.1), 4px 0 8px rgba(255, 255, 255, 0.1); 
 }
 .ma {
     display: none;
 }
+
+*/

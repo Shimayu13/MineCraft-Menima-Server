@@ -164,9 +164,11 @@
 
     .header {
         justify-content: space-between;
+        height: 100px;
     }
 
     .hamburger-menu {
+        padding-right: 10vw;
         display: flex;
     }
 
@@ -202,31 +204,13 @@
         display: flex;
         flex-direction: column;
     }
-}
 
-/*削除する部分*/
+    .horizontalMark{
+        height: 80px;
+        padding-top:10px;
+    }
 
-/*
-.structure h3{
-    display:none;
+    .logo{
+        height: 100%;
+    }
 }
-.structure:hover{
-    background-color: azure;
-    box-shadow: -4px 0 8px rgba(255, 255, 255, 0.1), 4px 0 8px rgba(255, 255, 255, 0.1); 
-}
-.st {
-    display: none;
-}
-
-.route h3{
-    display:none;
-}
-.route:hover{
-    background-color: azure;
-    box-shadow: -4px 0 8px rgba(255, 255, 255, 0.1), 4px 0 8px rgba(255, 255, 255, 0.1); 
-}
-.ma {
-    display: none;
-}
-
-*/

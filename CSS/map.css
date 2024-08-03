@@ -17,7 +17,6 @@
     width: 80vw; /* 幅を80vwに設定 */
     height: 80vw; /* 正方形にするために高さも80vwに設定 */
     margin: 3vw 10vw; /* 左右の間隔を10vw、上下の間隔を5vwに設定 */
-    border-radius: 3vw; /* 四隅を3vwの縁で切り取り */
     border: 1px solid gray; /* 縁を灰色で描く */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 周りに影をつける */
 }
@@ -25,5 +24,4 @@
 .mptitle {
     margin-left: 10vw; /* 左から10vwの間隔を設ける */
     margin-top: 5vw; /* 上から5vwの間隔を設ける */
-    margin-bottom: 5vw; /* 下から5vwの間隔を設ける */
 }

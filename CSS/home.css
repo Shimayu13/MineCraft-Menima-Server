@@ -99,12 +99,6 @@ body, html {
 }
 
 .newsBox .newstext {
-    text-align: center;
+    padding-left: 10vw;
+    align-items: center;
 }
-
-
-/*
-<div class="newsBox" id="newsBox3">
-<h2 class="newstitle">アップデート情報</h2>
-<p class="newstext">2024/7/10 vr.1.21.0.03</p>
-</div> */
